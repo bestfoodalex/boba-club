@@ -53,10 +53,10 @@ const generateTea = () => {
   if (match) {
     switch (teaType.name) {
       case 'milk':
-        milkType = getMilkOrFruitType(teaType, isRare, milkTypes, null);
+        milkType = getMilkOrFruitType(teaType, isRare, milkTypes, fruitTypes);
         break;
       case 'fruit':
-        fruitType = getMilkOrFruitType(teaType, isRare, null, fruitTypes);
+        fruitType = getMilkOrFruitType(teaType, isRare, milkTypes, fruitTypes);
         break;
       case 'justTea':
         justTeaFlavor = selectRandomFromHalf([...justTeaFlavors], isRare);

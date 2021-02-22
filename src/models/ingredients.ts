@@ -17,7 +17,7 @@ const teaFlavors = [
   { name: 'taiwanese', milk: true, popularity: 4, fruit: true, justTea: true, classic: true },
   { name: 'lapsang souchong black', milk: true, popularity: 2, fruit: false, justTea: true, classic: false },
   { name: 'earl gray', milk: true, popularity: 2, fruit: false, justTea: true, classic: false },
-  { name: 'white tea', milk: true, popularity: 4, fruit: true, justTea: true, classic: true },
+  { name: 'white tea', milk: true, popularity: 4, fruit: true, justTea: false, classic: true },
   { name: 'thai tea', milk: true, popularity: 8, fruit: false, justTea: false, classic: false },
   { name: 'hong kong', milk: true, popularity: 6, fruit: false, justTea: false, classic: false },
   { name: 'butterfly pea flower', milk: false, popularity: 2, fruit: false, justTea: false, classic: false },

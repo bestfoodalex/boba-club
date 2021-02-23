@@ -168,7 +168,7 @@ const BobaClub = () => {
         </TextWrap>}
         <BobaFooter background="light-4" justify="center" pad="small">
           <Text textAlign="center" size="small">
-            &copy; 2021 Boba Club &amp; <a href="http://alexjewell.com" target="_blank">Alex Jewell</a>.<br />
+            &copy; 2021 Boba Club &amp; <a href="http://alexjewell.com" target="_blank">Alex Jewell</a>.{' '}
             Contribute to the project on <a href="https://github.com/bestfoodalex/boba-club" target="_blank">GitHub</a>.
           </Text>
         </BobaFooter>
@@ -212,6 +212,7 @@ const ButtonWrap = styled(Box)`
     flex-direction: row;
 
     label {
+      padding-bottom: 0;
       padding-right: 20px;
     }
   `}

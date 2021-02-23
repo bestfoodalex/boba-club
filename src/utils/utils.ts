@@ -8,14 +8,20 @@ const getRandom = (arr: any, numResults: number = 1) => {
   const results = [];
 
   for (let i = 0; i < numResults; i++) {
-    results.push(arr[~~(Math.random() * arr.length)]);
+    let random = arr[~~(Math.random() * arr.length)];
+
+    while (results.filter(r => r.name === random.name).length > 0 || results.indexOf(random) > -1) {
+      random = arr[~~(Math.random() * arr.length)];
+    }
+
+    results.push(random);
   }
   
   return numResults > 1 ? results : results[0];
 };
 
-const selectRandomFromHalf = (arr: any, isRare: boolean) => {
-  const sortedArr = arr.sort((a: any, b: any) => (a.popularity > b.popularity) ? 1 : -1);
+const selectRandomFromHalf = (arr: any, isRare: boolean = false) => {
+  const sortedArr = arr.sort((a: any, b: any) => (a.popularity < b.popularity) ? 1 : -1);
   const half = Math.ceil(sortedArr.length / 2);
   const firstHalf = sortedArr.splice(0, half);
   const secondHalf = sortedArr.splice(-half);
@@ -36,7 +42,12 @@ const getTeaFlavor = (teaFlavors: any, isRare: boolean) => {
 
 const getTeaType = (teaTypes: any) => {
   const isRare = getWeightedBool(75);
-  return selectRandomFromHalf([...teaTypes], isRare);
+  const getThree = getRandom(teaTypes, 3);
+  const sortedArr = getThree.sort((a: any, b: any) => (a.popularity < b.popularity) ? 1 : -1);
+
+  console.log(isRare, sortedArr);
+
+  return isRare ? sortedArr[2] : sortedArr[0];
 };
 
 const doesTeaFitType = (tea: any, teaType: any) => {

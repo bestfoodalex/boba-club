@@ -196,6 +196,15 @@ const justTeaFlavors = [
   { name: 'spiced', popularity: 2 }
 ];
 
+const sideItemTypes = [
+  { name: 'Tim Tams', popularity: 8 },
+  { name: 'popcorn chicken', popularity: 10 },
+  { name: 'boba lava cake', popularity: 3 },
+  { name: 'boba waffles', popularity: 7 },
+  { name: 'grilled chicken steak', popularity: 6 },
+  { name: 'boba plushie', popularity: 5 }
+];
+
 const levels = [
   0,
   25,
@@ -215,7 +224,8 @@ export {
   jellyTypes, 
   justTeaFlavors, 
   levels, 
-  milkTypes, 
+  milkTypes,
+  sideItemTypes,
   teaFlavors, 
   teaTypes, 
   toppingTypes 

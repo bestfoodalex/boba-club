@@ -29,6 +29,11 @@ const getWeightedBool = (howOften: number = 50) => {
   return d >= howOften;
 };
 
+const getSideItemType = (sideItemTypes: any) => {
+  const isRare = getWeightedBool(75);
+  return selectRandomFromHalf([...sideItemTypes], isRare);
+};
+
 const getTeaFlavor = (teaFlavors: any, isRare: boolean) => {
   const teas = getRandom(teaFlavors, 3);
   return selectRandomFromHalf([...teas], isRare);
@@ -71,6 +76,7 @@ export {
   getMilkOrFruitType,
   getRandom,
   getTeaFlavor,
+  getSideItemType,
   getTeaType,
   getWeightedBool,
   joinAnd,

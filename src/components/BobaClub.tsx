@@ -8,7 +8,8 @@ import {
   jellyTypes, 
   justTeaFlavors, 
   levels, 
-  milkTypes, 
+  milkTypes,
+  sideItemTypes,
   teaFlavors, 
   teaTypes, 
   toppingTypes 
@@ -17,6 +18,7 @@ import {
   doesTeaFitType,
   getMilkOrFruitType,
   getRandom,
+  getSideItemType,
   getTeaFlavor,
   getTeaType,
   getWeightedBool,
@@ -31,10 +33,12 @@ const generateTea = () => {
   const hasBoba = getWeightedBool(25);
   const hasJelly = getWeightedBool(55);
   const hasToppings = getWeightedBool(85);
+  const hasSideItem = getWeightedBool(25);
   const bobas = [];
   let teaFlavor = getTeaFlavor(teaFlavors, isRare);
   let teaType = getTeaType(teaTypes);
   let match = doesTeaFitType(teaFlavor, teaType);
+  let sideItem = getSideItemType(sideItemTypes);
   let milkType;
   let fruitType;
   let justTeaFlavor;
@@ -115,6 +119,7 @@ const generateTea = () => {
   formattedName += `${(hasBoba || hasJelly) ? ' with ' + joinAnd(bobas.map(b => b.name)) : ''}`;
   formattedName += `${hasFoam ? ', topped with ' + foamType.name : ''}`;
   formattedName += `${!hasToppings ? '' : (hasFoam ? ' and ' + toppingType.name : ', topped with ' + toppingType.name)}`;
+  formattedName += `${hasSideItem ? ' and comes with ' + sideItem.name : ''}`;
 
   return formattedName;
 };

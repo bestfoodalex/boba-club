@@ -138,7 +138,6 @@ const toppingTypes = [
 const milkTypes = [
   { name: 'milk', popularity: 10, dairyFree: false, flavorProfiles: ['dessert', 'fruit', 'floral', 'matcha', 'thai tea', 'coffee'] },
   { name: 'classic milk', popularity: 10, dairyFree: false, flavorProfiles: ['dessert', 'fruit', 'floral', 'matcha', 'thai tea', 'coffee'] },
-  { name: 'whole milk', popularity: 7, dairyFree: false, flavorProfiles: ['dessert', 'fruit', 'floral', 'matcha', 'thai tea', 'coffee'] },
   { name: 'sweet rice milk', popularity: 3, flavorProfiles: ['dessert', 'fruit', 'floral', 'matcha', 'thai tea', 'coffee'] },
   { name: 'avocado milk', popularity: 4, dairyFree: false, flavorProfiles: ['dessert', 'fruit', 'floral', 'matcha'] },
   { name: 'almond milk', popularity: 7, flavorProfiles: ['dessert', 'fruit', 'floral', 'matcha', 'thai tea', 'coffee'] },
